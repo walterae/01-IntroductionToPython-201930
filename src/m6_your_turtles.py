@@ -34,10 +34,10 @@ window = rg.TurtleWindow()
 #Define turtle jack who draws with a blue pen at a speed of 5
 
 jack = rg.SimpleTurtle('turtle')
-jack.pen = rg.Pen('blue', 1)
+jack.pen = rg.Pen('blue', 3)
 jack.speed = 5
 
-for j in range (50):
+for j in range (50): #Move jack in an expanding star shape
     jack.forward(j)
     jack.right(50)
     jack.backward(j-10)
@@ -49,10 +49,17 @@ jill.pen = rg.Pen('red', 1)
 jill.speed = 8
 radius = 100  #radius of circle
 
-for j in range (4):
+#Change inital orientation of jill
 
-    jill.draw_circle(radius)
-    jill.backward(5)
+jill.left(90)
+jill.forward(10)
+jill.right(180)
+jill.forward(60)
+
+for j in range (6): #move jill in a decreasing circle shape
+
+    jill.draw_circle(radius) #Draw circle
+    jill.backward(5) #Move jill backwards after drawing the circle
     radius = radius - 10
 
 
