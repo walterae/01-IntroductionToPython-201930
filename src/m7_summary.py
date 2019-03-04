@@ -43,6 +43,23 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   As always, COMMIT-and-PUSH when you are done with this module.
 #
 ########################################################################
-import rosegraphics as rg
-sam = rg.SimpleTurtle()
-sam.
+import rosegraphics as rg #import rosegrapics
+
+window = rg.TurtleWindow() #Create window for turtle
+
+sam = rg.SimpleTurtle() #Create SimpleTurtle
+sam.pen = rg.Pen('blue',5) #Create SimpleTurle with blue pen of thickness 5
+
+sam.left(90) #Move the turtle so its facing upwards
+sam.forward(200) #Move turtle forward 200 pixels
+
+sam.pen_up()#lift pen up
+sam.go_to(rg.Point(100,-40)) #move pen to the Point (100,-40)
+
+sam.pen_down()#put pen down
+
+sam.pen = rg.Pen('green',10) #change pen to have the color green and thickness 10
+
+sam.backward(150) #move turtle backwards 150 pixles
+
+window.close_on_mouse_click()
